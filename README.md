@@ -5,7 +5,9 @@ En este repositorio se encuentra el taller de POO y modificadores de acceso en P
 Respuestas : 
 1.
   A) a.x
+  
   B) a._y
+  
   D) a._A__z
 
   
@@ -14,33 +16,36 @@ Respuestas :
 
   
 3. 
-  A) R: Falso: _nombre es solo una convención que indica “uso interno” pero no impide el acceso.  
+  A) R: Falso: _nombre es solo una convención que indica “uso interno” pero no impide el acceso.
+
   B) R: Falso: __nombre aplica name-mangling pero no es imposible acceder ya que se puede con
+  
       _Clase__nombre.
+      
   C) R: Verdadero: El atributo __x se transforma a _Clase__x, por ello depende del nombre de la clase
       donde se definió.
 
       
-4. 
+5. 
   R: Imprime: abc
   No hay error de acceso debido a que usa la convención de protegido pero sigue siendo accesible
   desde la subclase, por lo que no hay como tal una restricción a su acceso.
 
 
-5.  
+6.  
   R : (2, 1)
 
 
-6. 
+7. 
   R: Cuando se intenta reasignar el valor ocurre un error debido a que __slots__ solo permite
   x, no permite y.
 
 
-7.
+8.
   R: self._b = 99
 
 
-8.
+9.
   R: True False True
   Imprime esto debido a que el primero '_step' está protegido, pero se puede
   acceder a él e imprime true, el segundo como fue mangleado y no fue
@@ -48,28 +53,28 @@ Respuestas :
   entonces imprime true
 
 
-9.
+10.
   R: print(s._S__data)
 
 
-10.
+11.
   R: El mas probable es _D__a debido a que es un atributo privado entonces lo renombra de esta
   manera _NombreDeLaClase__nombre y lo muestra de esta manera.
 
 
-11.
+12.
   return self._saldo
    if value < 0:
    raise ValueError("El saldo no puede ser negativo")
    self._saldo = value
 
 
-12. 
+13. 
   ra_f(self):
    return self._c * 9/5 + 32
 
 
-13. 
+14. 
   :
  def nombre(self, value):
    if not isinstance(value, str):
@@ -77,12 +82,12 @@ Respuestas :
  self._nombre = value
 
 
-14. 
+15. 
   R: def items(self):
      return tuple(self.__items)
 
 
-15. 
+16. 
   @property
    def velocidad (self):
   return self._velocidad
@@ -93,7 +98,7 @@ Respuestas :
   self._velocidad = value
 
 
-16. 
+17. 
   R: El _atributo se usaría como para marcar un atributo que solo se puede usar o acceder a el si
   es necesario, ósea como tratar de acceder a el lo menos posible pero si es necesario hacerlo, y el
   __atributo considero que solo se usaría para evitar confundir atributos entre clases o para
@@ -101,7 +106,7 @@ Respuestas :
   acceder a el.
 
 
-17.
+18.
   R: El problema es que al devolver la lista, se devuelve la original no una copia, entonces si la llega
 a modificar se pueden perder datos.
 
